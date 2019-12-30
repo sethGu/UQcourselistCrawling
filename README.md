@@ -1,0 +1,2 @@
+# UQcourselistCrawling
+昆士兰大学-TheUniversityOfQueensland-UQ课表爬虫
