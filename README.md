@@ -1,2 +1,2 @@
 # UQcourselistCrawling
-昆士兰大学-TheUniversityOfQueensland-UQ课表爬虫
+昆士兰大学-The University Of Queensland - UQ课表爬虫
