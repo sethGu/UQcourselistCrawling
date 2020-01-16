@@ -66,7 +66,7 @@ def findCourseDetails(url: list, code: list):   # url是url前缀，code是cours
 
 findCourseCodes(url_major)
 
-# solution = Solutions()
-# solution.loadCourseCode()
-# # print(solution.subject_course)  # 这玩意儿也是课程编号
-# findCourseDetails(url_detail, solution.subject_course)
+solution = Solutions()
+solution.loadCourseCode()
+# print(solution.subject_course)  # 这玩意儿也是课程编号
+findCourseDetails(url_detail, solution.subject_course)
