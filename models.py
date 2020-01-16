@@ -34,3 +34,8 @@ class Solutions:
     def loadCourseCode(self):
         with open(course_code, "rb") as f:
             self.subject_course = pickle.load(f)
+
+    def deleteOccationalBasis(self, li: list):
+        for i in li:
+            self.subject_course.remove(i)
+

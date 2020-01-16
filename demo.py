@@ -31,7 +31,10 @@ def findCourseCodes(url: list):
             tmp_coursecode = re.findall(r'course_code=.*?"', cod, re.S)
             solution = Solutions()
             coursecode = solution.getCourseCode(tmp_coursecode)
-            print(coursecode)
+            # 删除thesis project course，从beautiful soup删起来太麻烦了
+            occ = ['COMP2000', 'COMP2001', 'COMP3000', 'COMP3001', 'COMP3880', 'COMP4000', 'COMP4001', 'CSSE3080', 'CSSE3081', 'CSSE3090', 'CSSE3091', 'CSSE4080', 'CSSE4081', 'CSSE4090', 'CSSE4091', 'DECO2000', 'DECO2001', 'DECO3000', 'DECO3001', 'DECO4000', 'DECO4001']
+            solution.deleteOccationalBasis(occ)
+            print(solution.subject_course)
             # 保存课程编号
             solution.saveCourseCode()
             response.close()
