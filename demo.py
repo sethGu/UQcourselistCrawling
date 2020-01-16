@@ -22,7 +22,7 @@ def findCourseCodes(url: list):
         try:
             response = urllib.request.urlopen(request)
             soup = BeautifulSoup(response, 'html.parser')
-            code = soup.find('div', attrs={'class': 'courselist'})
+            code = soup.find('div', attrs={'id': 'program-course-list'})
             # unit = soup.find('td', attrs={'class': 'unit'})
             # title = soup.find('td', attrs={'class': 'title'})
             # 把对象转变为字符串
@@ -65,7 +65,8 @@ def findCourseDetails(url: list, code: list):   # url是url前缀，code是cours
 
 
 findCourseCodes(url_major)
-solution = Solutions()
-solution.loadCourseCode()
-# print(solution.subject_course)  # 这玩意儿也是课程编号
-findCourseDetails(url_detail, solution.subject_course)
+
+# solution = Solutions()
+# solution.loadCourseCode()
+# # print(solution.subject_course)  # 这玩意儿也是课程编号
+# findCourseDetails(url_detail, solution.subject_course)
